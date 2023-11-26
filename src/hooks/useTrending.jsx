@@ -2,20 +2,18 @@ import { useQuery } from "react-query"
 import useAxiosPublic from "./useAxiosPublic"
 
 
-const useFeatured = () => {
+const useTrending = () => {
     const axiosPublic = useAxiosPublic()
-    const { isPending, error, data:featuredItems } = useQuery({
-        queryKey: ['featured'],
+    const { isPending, error, data:trendingItems } = useQuery({
+        queryKey: ['trending'],
         queryFn: async() => {
-            const response = await axiosPublic.get('/products/featured');
+            const response = await axiosPublic.get('/products/trending');
             return response.data;
         }
-
-
       })
       if (isPending) return 'Loading...'
       if (error) return 'An error has occurred: ' + error.message
-    return [featuredItems, isPending]
+    return [trendingItems, isPending]
 }
 
-export default useFeatured
+export default useTrending
