@@ -2,6 +2,7 @@
 import { useContext } from "react"
 import { useForm } from "react-hook-form"
 import { AuthContext } from "../../providers/AuthProvider"
+import { Link } from "react-router-dom"
 const Login = () => {
     const {logIn} = useContext(AuthContext)
   const { register, handleSubmit } = useForm()
@@ -53,6 +54,7 @@ const Login = () => {
               <input type="submit" className="btn btn-primary" value="Login"/>
               </div>
             </form>
+            <p>Don't have any account? <Link to={'/signup'}>Register account</Link></p>
           </div>
         </div>
       </div>

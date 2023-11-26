@@ -5,7 +5,8 @@
       "description": "Experience the future with SmartTech Gadget X, a cutting-edge device that seamlessly integrates with your smart home ecosystem. Control and monitor your home with ease.",
       "tags": ["Smart Home", "Gadgets", "IoT"],
       "voteCount": 120,
-      "productOwner": "username_1"
+      "productOwner": "username_1",
+      "productStatus" : "featured"
     },
     {
       "productName": "InnoVision VR Headset",
@@ -13,7 +14,8 @@
       "description": "Immerse yourself in a new dimension of entertainment with InnoVision VR Headset. Whether gaming or exploring virtual worlds, redefine your experience with cutting-edge technology.",
       "tags": ["Virtual Reality", "Gaming", "Innovation"],
       "voteCount": 85,
-      "productOwner": "username_2"
+      "productOwner": "username_2",
+      "productStatus" : "featured"
     },
     {
       "productName": "FutureGen Robotics Kit",
@@ -29,7 +31,8 @@
       "description": "Unleash the power of innovation with the QuantumSpeed Laptop. Packed with cutting-edge features, this laptop redefines speed, performance, and portability for the modern professional.",
       "tags": ["Laptops", "Technology", "Innovation"],
       "voteCount": 105,
-      "productOwner": "username_4"
+      "productOwner": "username_4",
+      "productStatus" : "featured"
     }
   ]
   
