@@ -1,0 +1,35 @@
+[
+    {
+      "productName": "SmartTech Gadget",
+      "productImage": "https://i.ibb.co/yBRp0B7/blocks-fletcher-3-Pa-UEEcw-Mc-unsplash.jpg",
+      "description": "Experience the future with SmartTech Gadget X, a cutting-edge device that seamlessly integrates with your smart home ecosystem. Control and monitor your home with ease.",
+      "tags": ["Smart Home", "Gadgets", "IoT"],
+      "voteCount": 120,
+      "productOwner": "username_1"
+    },
+    {
+      "productName": "InnoVision VR Headset",
+      "productImage": "https://i.ibb.co/YhXNPSZ/maxim-hopman-8vn4-Kvf-U640-unsplash.jpg",
+      "description": "Immerse yourself in a new dimension of entertainment with InnoVision VR Headset. Whether gaming or exploring virtual worlds, redefine your experience with cutting-edge technology.",
+      "tags": ["Virtual Reality", "Gaming", "Innovation"],
+      "voteCount": 85,
+      "productOwner": "username_2"
+    },
+    {
+      "productName": "FutureGen Robotics Kit",
+      "productImage": "https://i.ibb.co/b1h1Sq9/michael-fousert-Rvm-Tv-J6t-Sw-A-unsplash.jpg",
+      "description": "Ignite curiosity and learning with the FutureGen Robotics Kit. Perfect for aspiring engineers and students, this kit combines fun and education to foster a passion for robotics.",
+      "tags": ["Robotics", "STEM", "Education"],
+      "voteCount": 62,
+      "productOwner": "username_3"
+    },
+    {
+      "productName": "QuantumSpeed Laptop",
+      "productImage": "https://i.ibb.co/857gYr7/kari-shea-1-SAnr-Ixw5-OY-unsplash.jpg",
+      "description": "Unleash the power of innovation with the QuantumSpeed Laptop. Packed with cutting-edge features, this laptop redefines speed, performance, and portability for the modern professional.",
+      "tags": ["Laptops", "Technology", "Innovation"],
+      "voteCount": 105,
+      "productOwner": "username_4"
+    }
+  ]
+  
