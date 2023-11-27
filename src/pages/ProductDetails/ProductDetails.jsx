@@ -3,10 +3,11 @@ import useAxiosPublic from "../../hooks/useAxiosPublic";
 import { useQuery } from "react-query";
 import { useContext } from "react";
 import AuthProvider, { AuthContext } from "../../providers/AuthProvider";
+import Reviews from "../../components/Testimonial/Reviews/Reviews";
+import SubmitReview from "../../components/Testimonial/SubmitReview/SubmitReview";
 
 const ProductDetails = () => {
   const { user } = useContext(AuthContext);
-  console.log("user", user);
   const axiosPublic = useAxiosPublic();
   const { id } = useParams();
   const {
@@ -22,11 +23,12 @@ const ProductDetails = () => {
   });
   if (isPending) return "Loading...";
   if (error) return "An error has occurred: " + error.message;
-
+  const reviews = productDetail?.reviews
+  console.log('pro img', productDetail?.productOwnerImage);
   return (
     <>
       <div
-        className="hero"
+        className="hero py-12"
         style={{
           backgroundImage:
             "url(https://i.ibb.co/mzfThy3/aron-visuals-b-ZZp1-Pm-HI0-E-unsplash.jpg)",
@@ -35,7 +37,7 @@ const ProductDetails = () => {
         <div className="hero-overlay bg-opacity-60"></div>
         <div className="hero-content text-center text-neutral-content">
           <div className="">
-            <h1 className="mb-5 text-5xl font-bold">
+            <h1 className="mb-5 text-5xl font-bold my-4">
               Details of {productDetail?.productName}
             </h1>
             <button className="btn btn-primary">
@@ -54,23 +56,26 @@ const ProductDetails = () => {
               <div className="card-body">
                 {/* <h2 className="card-title">Shoes!</h2> */}
                 <p>{productDetail?.description}</p>
-                <div className="card-actions">
-                  <button className="btn btn-primary">Buy Now</button>
-                </div>
               </div>
+            </div>
+            {/* Testimonials */}
+            <div className="">
+              <h1 className="text-3xl font-semibold mt-12">Product Reviews</h1>
+              <Reviews reviews={reviews}></Reviews>
+              <SubmitReview productDetail={productDetail} user={user}></SubmitReview>
             </div>
           </div>
           <div>
             <div className="card card-compact w-96 bg-base-100 border-2">
               <div className="card-body">
-                  <h2 className="text-xl font-semibold">Author Information: </h2>
+                <h2 className="text-xl font-semibold">Author Information: </h2>
                 <div className="flex">
-                <div className="avatar">
-                  <div className="w-16 rounded-full">
-                    <img src={user?.photoURL} />
+                  <div className="avatar">
+                    <div className="w-16 rounded-full">
+                      <img src={productDetail?.productOwnerImage || user?.photoURL} />
+                    </div>
                   </div>
-                </div>
-                <h2 className="card-title ml-4">{user?.displayName}</h2>
+                  <h2 className="card-title ml-4">{productDetail?.productOwner}</h2>
                 </div>
               </div>
             </div>

@@ -1,38 +1,91 @@
 [
     {
-      "productName": "SmartTech Gadget",
-      "productImage": "https://i.ibb.co/yBRp0B7/blocks-fletcher-3-Pa-UEEcw-Mc-unsplash.jpg",
-      "description": "Experience the future with SmartTech Gadget X, a cutting-edge device that seamlessly integrates with your smart home ecosystem. Control and monitor your home with ease.",
-      "tags": ["Smart Home", "Gadgets", "IoT"],
-      "voteCount": 120,
-      "productOwner": "username_1",
-      "productStatus" : "featured"
-    },
-    {
+        "productName": "SmartTech Gadget",
+        "productImage": "https://i.ibb.co/yBRp0B7/blocks-fletcher-3-Pa-UEEcw-Mc-unsplash.jpg",
+        "description": "Experience the future with SmartTech Gadget X, a cutting-edge device that seamlessly integrates with your smart home ecosystem. Control and monitor your home with ease.",
+        "tags": ["Smart Home", "Gadgets", "IoT"],
+        "voteCount": 120,
+        "productOwner": "Ims",
+        "productOwnerImage": "https://i.ibb.co/8MM1bfB/Rectangle-4288.png",
+        "productOwnerEmail": "ims@gmail.com",
+        "productStatus": "featured",
+        "productTrending": "yes",
+        "productChecked": "yes",
+        "reviews": [
+          {
+            "reviewFrom": "User1",
+            "userEmail": "user1@example.com",
+            "reviewText": "Amazing product! It made my home truly smart and connected."
+          },
+          {
+            "reviewFrom": "User2",
+            "userEmail": "user2@example.com",
+            "reviewText": "The integration is seamless, and the gadget is a game-changer."
+          }
+        ]
+      },
+  {
       "productName": "InnoVision VR Headset",
       "productImage": "https://i.ibb.co/YhXNPSZ/maxim-hopman-8vn4-Kvf-U640-unsplash.jpg",
       "description": "Immerse yourself in a new dimension of entertainment with InnoVision VR Headset. Whether gaming or exploring virtual worlds, redefine your experience with cutting-edge technology.",
       "tags": ["Virtual Reality", "Gaming", "Innovation"],
       "voteCount": 85,
       "productOwner": "username_2",
-      "productStatus" : "featured"
-    },
-    {
+      "productStatus": "featured",
+      "reviews": [
+          {
+              "reviewFrom": "User3",
+              "userEmail": "user3@example.com",
+              "reviewText": "The VR experience is incredible, especially for gaming enthusiasts."
+          },
+          {
+              "reviewFrom": "User4",
+              "userEmail": "user4@example.com",
+              "reviewText": "Innovative design and high-quality materials make this headset a winner."
+          }
+      ]
+  },
+  {
       "productName": "FutureGen Robotics Kit",
       "productImage": "https://i.ibb.co/b1h1Sq9/michael-fousert-Rvm-Tv-J6t-Sw-A-unsplash.jpg",
       "description": "Ignite curiosity and learning with the FutureGen Robotics Kit. Perfect for aspiring engineers and students, this kit combines fun and education to foster a passion for robotics.",
       "tags": ["Robotics", "STEM", "Education"],
       "voteCount": 62,
-      "productOwner": "username_3"
-    },
-    {
+      "productOwner": "username_3",
+      "productStatus": "featured",
+      "productChecked": "yes",
+      "reviews": [
+          {
+              "reviewFrom": "User5",
+              "userEmail": "user5@example.com",
+              "reviewText": "The robotics kit is educational and entertaining, great for kids."
+          },
+          {
+              "reviewFrom": "User6",
+              "userEmail": "user6@example.com",
+              "reviewText": "Excellent quality and a fantastic way to introduce kids to robotics."
+          }
+      ]
+  },
+  {
       "productName": "QuantumSpeed Laptop",
       "productImage": "https://i.ibb.co/857gYr7/kari-shea-1-SAnr-Ixw5-OY-unsplash.jpg",
       "description": "Unleash the power of innovation with the QuantumSpeed Laptop. Packed with cutting-edge features, this laptop redefines speed, performance, and portability for the modern professional.",
       "tags": ["Laptops", "Technology", "Innovation"],
       "voteCount": 105,
       "productOwner": "username_4",
-      "productStatus" : "featured"
-    }
-  ]
-  
+      "productStatus": "featured",
+      "reviews": [
+          {
+              "reviewFrom": "User7",
+              "userEmail": "user7@example.com",
+              "reviewText": "The QuantumSpeed Laptop exceeded my expectations in terms of speed and performance."
+          },
+          {
+              "reviewFrom": "User8",
+              "userEmail": "user8@example.com",
+              "reviewText": "Innovative design and powerful features make this laptop a must-have for professionals."
+          }
+      ]
+  }
+]
