@@ -36,8 +36,8 @@ const NavBar = () => {
             <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
               <div className="w-10 rounded-full">
                 <img
-                  alt="Tailwind CSS Navbar component"
-                  src="https://i.ibb.co/CM6drVv/369572563-1378054442779951-4673260431813722840-n.jpg"
+                  alt="user image"
+                  src={user?.photoURL}
                 />
               </div>
             </label>
@@ -47,7 +47,7 @@ const NavBar = () => {
             >
               <li>
                 <a className="justify-between">
-                  UserName
+                {user?.displayName}
                 </a>
               </li>
               <li>
