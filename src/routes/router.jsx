@@ -11,6 +11,8 @@ import ProductDetails from "../pages/ProductDetails/ProductDetails";
 import Dashboard from "../Layout/Dashboard";
 import MyProfile from "../pages/Dashboard/MyProfile/MyProfile";
 import AddProducts from "../pages/Dashboard/AddProducts/AddProducts";
+import MyProducts from "../pages/Dashboard/MyProducts/MyProducts";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
     {
@@ -35,7 +37,7 @@ const router = createBrowserRouter([
   },
   {
     path: '/product/:id',
-    element: <ProductDetails></ProductDetails>
+    element: <PrivateRoute><ProductDetails></ProductDetails></PrivateRoute>
 },
       ]
     },
@@ -54,7 +56,11 @@ const router = createBrowserRouter([
         {
           path: 'addProducts',
           element: <AddProducts></AddProducts>
-        }
+        },
+        {
+          path: 'myProducts',
+          element: <MyProducts></MyProducts>
+        },
       ]
     }
   ]);

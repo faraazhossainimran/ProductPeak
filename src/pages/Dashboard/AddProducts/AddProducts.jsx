@@ -12,7 +12,8 @@ const AddProducts = () => {
           productOwner: user?.displayName,
           productOwnerEmail: user?.email,
           productOwnerImage: user?.photoURL,
-          productChecked: "no"
+          productChecked: "no", 
+          voteCount: 0
         };
         axiosPublic.post("/products", productData)
           .then((res) => {

@@ -1,5 +1,5 @@
   import { ImProfile } from "react-icons/im";
-  import { FaList, FaCirclePlus  } from "react-icons/fa6";
+  import { FaList, FaCirclePlus, FaFileCirclePlus  } from "react-icons/fa6";
   import { NavLink, Outlet } from "react-router-dom";
   import { AiFillBackward } from "react-icons/ai";
 const Dashboard = () => {
@@ -19,6 +19,12 @@ const Dashboard = () => {
                   <NavLink to={"/dashboard/addProducts"}>
                   <FaCirclePlus />
                     Add Products
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink to={"/dashboard/myProducts"}>
+                  <FaFileCirclePlus />
+                    My Products
                   </NavLink>
                 </li>
             

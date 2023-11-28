@@ -5,19 +5,24 @@ import { createContext, useEffect, useState } from "react";
 export const AuthContext = createContext(null);
 const AuthProvider = ({children}) => {
     const [user, setUser] = useState(null)
+    const [loading, setLoading] = useState(true)
     const auth = getAuth(app);
     const signUp = (email, password) => {
+        setLoading(true)
        return createUserWithEmailAndPassword(auth, email, password)
     }
     const logOut = () => {
+        setLoading(true)
         return signOut(auth)
     }
     // login user
     const logIn = (email, password) => {
+        setLoading(true)
         return signInWithEmailAndPassword(auth, email, password)
     }
     // update user info
     const updateUserProfile = (name, photo) => {
+        setLoading(true)
         return updateProfile(auth.currentUser, {
              displayName: name, photoURL: photo
            })
@@ -27,6 +32,7 @@ const AuthProvider = ({children}) => {
        const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
            setUser(currentUser)
             if (user) {
+                setLoading(false)
                 console.log(user.email);
             } else {
               return ()=> {unsubscribe()}
