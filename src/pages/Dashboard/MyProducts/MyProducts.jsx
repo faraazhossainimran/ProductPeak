@@ -11,6 +11,7 @@ const MyProducts = () => {
     isPending,
     error,
     data: myProducts,
+    refetch
   } = useQuery({
     queryKey: ["products"],
     queryFn: async () => {
@@ -43,6 +44,7 @@ const MyProducts = () => {
           <tbody>
             {myProducts?.map((myProduct, index) => (
               <MyProductTable
+              refetch={refetch}
                 key={index}
                 myProduct={myProduct}
               ></MyProductTable>

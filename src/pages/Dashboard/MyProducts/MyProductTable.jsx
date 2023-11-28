@@ -1,12 +1,13 @@
 import React from "react";
 import useAxiosPublic from "../../../hooks/useAxiosPublic";
 
-const MyProductTable = ({myProduct, index}) => {
+const MyProductTable = ({myProduct, refetch}) => {
     const {_id, productName, productImage, productChecked, voteCount} = myProduct;
     const axiosPublic = useAxiosPublic()
     const handleDelete=(id)=> {
         axiosPublic.delete(`/dashboard/myProducts/${id}`)
         .then(res=> {
+            refetch()
             console.log(res.data);
         })
     }
