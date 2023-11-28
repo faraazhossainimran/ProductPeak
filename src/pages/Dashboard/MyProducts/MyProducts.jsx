@@ -13,7 +13,7 @@ const MyProducts = () => {
     data: myProducts,
     refetch
   } = useQuery({
-    queryKey: ["products"],
+    queryKey: ["myProducts"],
     queryFn: async () => {
       const response = await axiosPublic.get(
         `/dashboard/myProducts/${user?.email}`

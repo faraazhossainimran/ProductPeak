@@ -13,6 +13,8 @@ import MyProfile from "../pages/Dashboard/MyProfile/MyProfile";
 import AddProducts from "../pages/Dashboard/AddProducts/AddProducts";
 import MyProducts from "../pages/Dashboard/MyProducts/MyProducts";
 import PrivateRoute from "./PrivateRoute";
+import ProductReviewQueue from "../pages/Dashboard/ProductReviewQueue/ProductReviewQueue";
+import ReportedContents from "../pages/Dashboard/ReportedContents/ReportedContents";
 
 const router = createBrowserRouter([
     {
@@ -60,6 +62,14 @@ const router = createBrowserRouter([
         {
           path: 'myProducts',
           element: <MyProducts></MyProducts>
+        },
+        {
+          path: 'productReviewQueue',
+          element: <ProductReviewQueue></ProductReviewQueue>
+        },
+        {
+          path: 'reportedContents',
+          element: <ReportedContents></ReportedContents>
         },
       ]
     }
