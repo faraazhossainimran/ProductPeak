@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../../providers/AuthProvider";
 import { useForm } from "react-hook-form";
 import useAxiosPublic from "../../../hooks/useAxiosPublic";
+import Swal from "sweetalert2";
 const AddProducts = () => {
     const {user} = useContext(AuthContext)
     const axiosPublic = useAxiosPublic();
@@ -17,7 +18,13 @@ const AddProducts = () => {
         };
         axiosPublic.post("/products", productData)
           .then((res) => {
-            console.log(res.data);
+            Swal.fire({
+              position: "top-end",
+              icon: "",
+              title: "Your product has been saved",
+              showConfirmButton: false,
+              timer: 1500
+            });
           });
         console.log(data);
       };

@@ -33,11 +33,11 @@ const MyProducts = () => {
               {/* <th>
           #
         </th> */}
-              <th>Product name</th>
-              <th>Votes</th>
-              <th>Status</th>
-              <th>Update Product</th>
-              <th>Delete Product</th>
+              <th className="text-lg">Product name</th>
+              <th className="text-lg">Votes</th>
+              <th className="text-lg">Status</th>
+              <th className="text-lg">Update</th>
+              <th className="text-lg">Delete</th>
               <th></th>
             </tr>
           </thead>

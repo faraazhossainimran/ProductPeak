@@ -1,10 +1,11 @@
 import { useContext } from "react";
 import { useForm } from "react-hook-form"
 import { AuthContext } from "../../providers/AuthProvider";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import useAxiosPublic from "../../hooks/useAxiosPublic";
 const SignUP = () => {
+  const navigate = useNavigate()
   const {signUp, updateUserProfile} = useContext(AuthContext)
   const { register, handleSubmit } = useForm()
   const axiosPublic = useAxiosPublic()
@@ -26,6 +27,7 @@ const SignUP = () => {
         });
         axiosPublic.post('/user', userInfo)
         .then(res=> {
+          navigate("/")
           console.log(res.data);
         })
       })
