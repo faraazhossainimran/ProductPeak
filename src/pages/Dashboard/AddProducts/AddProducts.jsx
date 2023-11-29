@@ -6,7 +6,7 @@ import Swal from "sweetalert2";
 const AddProducts = () => {
     const {user} = useContext(AuthContext)
     const axiosPublic = useAxiosPublic();
-    const { register, handleSubmit } = useForm();
+    const { register, handleSubmit, reset } = useForm();
     const onSubmit = (data) => {
         const productData = {
           ...data,
@@ -25,6 +25,7 @@ const AddProducts = () => {
               showConfirmButton: false,
               timer: 1500
             });
+            reset()
           });
         console.log(data);
       };

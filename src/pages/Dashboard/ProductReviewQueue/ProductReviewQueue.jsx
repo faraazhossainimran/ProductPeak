@@ -17,37 +17,43 @@ const ProductReviewQueue = () => {
       return response.data;
     },
   });
+  
   if (isPending) return "Loading...";
   if (error) return "An error has occurred: " + error.message;
   return (
     <div>
+      {/* table start */}
       <div className="overflow-x-auto">
-        <table className="table">
-            {console.log(queueProducts)}
+        <table className="table table-zebra">
           {/* head */}
           <thead>
             <tr>
-              {/* <th>
-          #
-        </th> */}
-              <th className="text-lg">Product name</th>
-              <th className="text-lg">View Details</th>
-              <th className="text-lg">Make Featured</th>
-              <th className="text-lg">Accept</th>
-              <th className="text-lg">Reject</th>
               <th></th>
+              <th>Image</th>
+              <th>Name</th>
+              <th>View Details</th>
+              <th>Accept</th>
+              <th>Make Featured</th>
+              <th>Reject</th>
             </tr>
           </thead>
           <tbody>
-            {queueProducts?.map((queueProduct) => (
-              <ProductReviewQueueTable
-                refetch={refetch}
-                queueProduct={queueProduct}
-              ></ProductReviewQueueTable>
-            ))}
+            {/* row 1 */}
+            <>
+      {queueProducts?.map((queueProduct) => (
+        // <ProductReviewQueueTable
+        //   refetch={refetch}
+        //   queueProduct={queueProduct}
+        // ></ProductReviewQueueTable>
+        <>
+          <ProductReviewQueueTable queueProduct={queueProduct}></ProductReviewQueueTable>
+        </>
+      ))}
+    </>
           </tbody>
         </table>
       </div>
+      {/* table end */}
     </div>
   );
 };
