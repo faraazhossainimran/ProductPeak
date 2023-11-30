@@ -10,12 +10,6 @@ const Dashboard = () => {
   const {user} = useContext(AuthContext)
   const [role, setRole] = useState()
   const axiosPublic = useAxiosPublic()
-  // useEffect(()=> {
-  //   axiosPublic.get(`user/${user?.email}`)
-  //   .then(res => {
-  //     setRole(res.data)
-  //   })
-  // },[])
   const {
     isPending,
     error,

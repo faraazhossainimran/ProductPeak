@@ -5,8 +5,8 @@ import useProducts from "../../../hooks/useProducts";
 const ProductCard = ({productCard}) => {
     const { productImage, _id, productName, voteCount, tags } = productCard;
     const [products] = useProducts()
-    const upVoteHandler = () => {
-      console.log('upvote clicked and id is', voteCount +1 );
+    const upVoteHandler = (id) => {
+      console.log('upvote clicked and id is', voteCount +1, id );
     }
     return (
         <div className="shadow-xl">
@@ -19,7 +19,7 @@ const ProductCard = ({productCard}) => {
       <div className="card-body">
         <h2 className="card-title">
             <Link to={`/product/${_id}`}>{productName}</Link>
-          <div onClick={upVoteHandler} className="badge border-6 py-4 text-green border-neutral-500"><AiFillCaretUp className="text-2xl mr-2" />{voteCount > 0 ? voteCount : 0}</div>
+          <div onClick={()=> {upVoteHandler(_id)}} className="badge border-6 py-4 text-green border-neutral-500"><AiFillCaretUp className="text-2xl mr-2" />{voteCount > 0 ? voteCount : 0}</div>
         </h2>
         <div className="card-actions p-2">
             {tags?.map((tag, index) => (
