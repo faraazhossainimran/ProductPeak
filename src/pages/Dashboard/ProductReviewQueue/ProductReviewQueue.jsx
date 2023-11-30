@@ -46,7 +46,7 @@ const ProductReviewQueue = () => {
         //   queueProduct={queueProduct}
         // ></ProductReviewQueueTable>
         <>
-          <ProductReviewQueueTable queueProduct={queueProduct}></ProductReviewQueueTable>
+          <ProductReviewQueueTable refetch={refetch} queueProduct={queueProduct}></ProductReviewQueueTable>
         </>
       ))}
     </>

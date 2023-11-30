@@ -3,16 +3,35 @@
   import { NavLink, Outlet } from "react-router-dom";
   import { AiFillBackward } from "react-icons/ai";
 import useAxiosPublic from "../hooks/useAxiosPublic";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../providers/AuthProvider";
+import { useQuery } from "react-query";
 const Dashboard = () => {
   const {user} = useContext(AuthContext)
   const [role, setRole] = useState()
   const axiosPublic = useAxiosPublic()
-  axiosPublic.get(`user/${user?.email}`)
-  .then(res => {
-    setRole(res.data)
-  })
+  // useEffect(()=> {
+  //   axiosPublic.get(`user/${user?.email}`)
+  //   .then(res => {
+  //     setRole(res.data)
+  //   })
+  // },[])
+  const {
+    isPending,
+    error,
+    data: queueUser,
+    refetch,
+  } = useQuery({
+    queryKey: ["queueUser"],
+    queryFn: async () => {
+      const response = await axiosPublic.get(`user/${user?.email}`);
+      setRole(response.data)
+      return role;
+    },
+  });
+  
+  if (isPending) return "Loading...";
+  if (error) return "An error has occurred: " + error.message;
   return (
     <div className="container mx-auto">
       <div className="flex ">

@@ -1,18 +1,24 @@
 import { useQuery } from "react-query";
 import useAxiosPublic from "../../../hooks/useAxiosPublic";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
-const ProductReviewQueueTable = ({ queueProduct }) => {
-  console.log(queueProduct);
+const ProductReviewQueueTable = ({ queueProduct, refetch }) => {
   const axiosPublic = useAxiosPublic()
   const handleViewDetails = (id) => {
-    axiosPublic.get(`dashboard/prodcutReviewQueue/${id}`)
+    axiosPublic.get(`/dashboard/productReviewQueue/${id}`)
     .then(res => {
-      console.log(res.data);
+      // console.log(res.data);
     })
   }
   const handleAccept = (id) => {
     console.log(id);
+    axiosPublic.patch(`/dashboard/productReviewQueue/${id}`)
+    .then(res => {
+      refetch()
+      console.log("clicked");
+      console.log(res.data);
+    })
   }
   // const {
   //   isPending,
@@ -42,8 +48,8 @@ const ProductReviewQueueTable = ({ queueProduct }) => {
       </div>
     </th>
     <td>{queueProduct?.productName}</td>
-    <td><button onClick={()=> {handleViewDetails(queueProduct._id)}}><Link to={`/product/${queueProduct._id}`}>Check Product</Link></button></td>
-    <td><button onClick={()=> {handleAccept(queueProduct._id)}}>Check Product</button></td>
+    <td><button onClick={()=> {handleViewDetails(queueProduct._id)}}><Link to={`/product/${queueProduct._id}` }>Check Product</Link></button></td>
+    <td><button onClick={()=> {handleAccept(queueProduct._id)}}>Pending</button></td>
     <td>Pending</td>
     <td>Pending</td>
   </tr>
