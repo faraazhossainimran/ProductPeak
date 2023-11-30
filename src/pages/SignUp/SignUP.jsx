@@ -43,7 +43,7 @@ const SignUP = () => {
           <div className="text-center ">
             <h1 className="text-5xl font-bold">SignUp</h1>
           </div>
-          <div className="card w-[400px]">
+          <div className="card md:w-[400px]">
             <form onSubmit={handleSubmit(onSubmit)} className="card-body">
               <div className="form-control">
                 <label className="label">
@@ -102,7 +102,7 @@ const SignUP = () => {
               <input type="submit" className="btn btn-primary" value="SignUp"/>
               </div>
             </form>
-            <p>
+            <p className="text-center">
               Already have an account? <Link to={'/login'}>Login</Link>
             </p>
           </div>
