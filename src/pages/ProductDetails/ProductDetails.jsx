@@ -46,12 +46,12 @@ const ProductDetails = () => {
           </div>
         </div>
       </div>
-      <div className="container mx-auto">
-        <div className="grid grid-cols-3 gap-12 mx-[200px] mt-12">
-          <div className="col-span-2">
+      <div className="container mx-auto m-4 md:m-0">
+        <div className="grid md:grid-cols-3 md:gap-12 md:mx-[200px] mt-12">
+          <div className="md:col-span-2 m-4 md:m-0">
             <div className="card bg-base-100 border-2">
               <figure>
-                <img src={productDetail?.productImage} alt="Shoes" />
+                <img src={productDetail?.productImage} alt="" />
               </figure>
               <div className="card-body">
                 {/* <h2 className="card-title">Shoes!</h2> */}
@@ -66,7 +66,7 @@ const ProductDetails = () => {
             </div>
           </div>
           <div>
-            <div className="card card-compact w-96 bg-base-100 border-2">
+            <div className="card m-4 md:m-0 card-compact md:w-96 bg-base-100 border-2">
               <div className="card-body">
                 <h2 className="text-xl font-semibold">Author Information: </h2>
                 <div className="flex">
@@ -79,7 +79,8 @@ const ProductDetails = () => {
                 </div>
               </div>
             </div>
-            <div className="card card-compact w-96 bg-base-100 border-2 mt-6">
+              <div className="m-4 md:m-0">
+              <div className="card card-compact md:w-96 bg-base-100 border-2 mt-6">
               <div className="card-body">
                 <h2 className="card-title">Product Tags</h2>
                 <div className="card-actions p-2">
@@ -92,6 +93,7 @@ const ProductDetails = () => {
                 </div>
               </div>
             </div>
+              </div>
           </div>
         </div>
       </div>
