@@ -1,7 +1,22 @@
+import { useQuery } from "react-query";
 import useUsers from "../../../hooks/useUsers";
 import ManageUserTable from "./ManageUserTable";
+import useAxiosPublic from "../../../hooks/useAxiosPublic";
+
 const ManageUsers = () => {
-  const [users] = useUsers();
+  const axiosPublic = useAxiosPublic()
+  const {
+    isPending,
+    error,
+    data: users,
+    refetch,
+  } = useQuery({
+    queryKey: ["users"],
+    queryFn: async () => {
+      const response = await axiosPublic.get("/dashboard/manageUsers");
+      return response.data;
+    },
+  });
   return (
     <div>
       <div className="overflow-x-auto">
@@ -18,8 +33,9 @@ const ManageUsers = () => {
           <tbody>
             {/* row 1 */}
             {/* {users.map(user=> <ManageUserTable)} */}
-            {users?.map(user => <ManageUserTable user={user}></ManageUserTable>)}
-           
+            {users?.map((user) => (
+              <ManageUserTable refetch={refetch} user={user}></ManageUserTable>
+            ))}
           </tbody>
         </table>
       </div>

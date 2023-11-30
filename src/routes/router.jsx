@@ -16,11 +16,13 @@ import PrivateRoute from "./PrivateRoute";
 import ProductReviewQueue from "../pages/Dashboard/ProductReviewQueue/ProductReviewQueue";
 import ReportedContents from "../pages/Dashboard/ReportedContents/ReportedContents";
 import ManageUsers from "../pages/Dashboard/ManageUsers/ManageUsers";
+import ErrorPage from "../pages/ErrorPage/ErrorPage";
 
 const router = createBrowserRouter([
     {
       path: "/",
       element: <Main></Main>,
+      errorElement: <ErrorPage></ErrorPage>,
       children: [
         {
             path: '/',

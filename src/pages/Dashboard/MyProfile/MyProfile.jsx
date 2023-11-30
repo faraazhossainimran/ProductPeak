@@ -5,7 +5,7 @@ const MyProfile = () => {
     const {user} = useContext(AuthContext)
     return (
         <div className="m-4">
-            <h1 className="text-4xl my-4">User information of {user?.displayName}</h1>
+            <h1 className="text-4xl my-4"> Information of {user?.displayName}</h1>
             <div className="card card-compact bg-base-100">
               <div className="my-4">
                 <div className="flex">
