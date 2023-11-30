@@ -41,7 +41,7 @@ const ProductDetails = () => {
               Details of {productDetail?.productName}
             </h1>
             <button className="btn btn-primary">
-              {productDetail?.voteCount}
+              Total vote: {productDetail?.voteCount}
             </button>
           </div>
         </div>
@@ -83,11 +83,12 @@ const ProductDetails = () => {
               <div className="card-body">
                 <h2 className="card-title">Product Tags</h2>
                 <div className="card-actions p-2">
-                  {productDetail?.tags?.map((tag, index) => (
+                  {productDetail?.tags? <>{productDetail?.tags?.map((tag, index) => (
                     <div key={index} className="badge badge-outline">
-                      {tag}
+                     {tag}
                     </div>
-                  ))}
+                  ))}</> : <p className="text-lg">No Product tags for this product</p>}
+                
                 </div>
               </div>
             </div>
