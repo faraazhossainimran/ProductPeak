@@ -48,35 +48,35 @@ const router = createBrowserRouter([
     },
     {
       path: '/dashboard', 
-      element: <Dashboard></Dashboard>, 
+      element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>, 
       children: [
         {
           path: '/dashboard',
-          element: <MyProfile></MyProfile>
+          element: <PrivateRoute><MyProfile></MyProfile></PrivateRoute>
         },
         {
           path: 'myProfile',
-          element: <MyProfile></MyProfile>
+          element: <PrivateRoute><MyProfile></MyProfile></PrivateRoute>
         },
         {
           path: 'addProducts',
-          element: <AddProducts></AddProducts>
+          element: <PrivateRoute><AddProducts></AddProducts></PrivateRoute>
         },
         {
           path: 'myProducts',
-          element: <MyProducts></MyProducts>
+          element: <PrivateRoute><MyProducts></MyProducts></PrivateRoute>
         },
         {
           path: 'productReviewQueue',
-          element: <ProductReviewQueue></ProductReviewQueue>
+          element: <PrivateRoute><ProductReviewQueue></ProductReviewQueue></PrivateRoute>
         },
         {
           path: 'reportedContents',
-          element: <ReportedContents></ReportedContents>
+          element: <PrivateRoute><ReportedContents></ReportedContents></PrivateRoute>
         },
         {
           path: 'manageUsers',
-          element: <ManageUsers></ManageUsers>
+          element: <PrivateRoute> <ManageUsers></ManageUsers></PrivateRoute>
         },
       ]
     }

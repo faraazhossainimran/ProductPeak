@@ -12,7 +12,6 @@ const AuthProvider = ({children}) => {
        return createUserWithEmailAndPassword(auth, email, password)
     }
     const logOut = () => {
-        setLoading(true)
         return signOut(auth)
     }
     // login user
@@ -22,7 +21,6 @@ const AuthProvider = ({children}) => {
     }
     // update user info
     const updateUserProfile = (name, photo) => {
-        setLoading(true)
         return updateProfile(auth.currentUser, {
              displayName: name, photoURL: photo
            })
@@ -31,7 +29,7 @@ const AuthProvider = ({children}) => {
     useEffect(()=> {
        const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
            setUser(currentUser)
-            if (user) {
+            if (currentUser) {
                 setLoading(false)
                 console.log(user.email);
             } else {
@@ -43,6 +41,7 @@ const AuthProvider = ({children}) => {
       
     const authInfo = {
         user,
+        loading,
         signUp,
         logIn,
         updateUserProfile,
