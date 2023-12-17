@@ -23,11 +23,14 @@ const NavBar = () => {
   }
   const menuItems = (
     <>
-      <li>
+      <li className="text-xl">
         <Link to="/">Home</Link>
       </li>
-      <li>
+      <li className="text-xl">
         <Link to="/products">Products</Link>
+      </li>
+      <li className="text-xl">
+        <Link to="/discussion">Discussions</Link>
       </li>
     </>
   );
@@ -64,7 +67,7 @@ const NavBar = () => {
   <button className="btn btn-ghost"><Link to={'/login'}>Login</Link></button>
   </>
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto border-b-gray-500">
       <div className="navbar bg-base-100">
         <div className="navbar-start">
           <div className="dropdown">

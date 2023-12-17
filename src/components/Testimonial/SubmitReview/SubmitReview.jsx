@@ -20,7 +20,7 @@ const SubmitReview = ({ productDetail, user }) => {
   };
   return (
     <div>
-      <h1 className="text-3xl font-semibold mt-6 mb-4">Add Reviews</h1>
+      <h1 className="text-3xl font-semibold mt-6 mb-4 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">Add Reviews</h1>
       <div className="">
         <div className="">
           <div className=""></div>
@@ -34,7 +34,7 @@ const SubmitReview = ({ productDetail, user }) => {
                       <img src={user?.photoURL} />
                     </div>
                   </div>
-                  <h2 className="card-title ml-4 text-2xl">{user?.displayName}</h2>
+                  <h2 className="card-title ml-4 text-xl">{user?.displayName}</h2>
                 </div>
               </div>
             </div>
@@ -58,7 +58,7 @@ const SubmitReview = ({ productDetail, user }) => {
                 <input
                   type="submit"
                   value="submit"
-                  className="input input-bordered bg-primary text-white text-lg"
+                  className="input input-bordered bg-black text-white text-lg"
                   required
                 />
               </div>

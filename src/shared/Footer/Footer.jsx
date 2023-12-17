@@ -1,11 +1,11 @@
 const Footer = () => {
   return (
     <div>
-      <footer className="footer footer-center mt-12 p-10 bg-primary text-primary-content">
+      <footer className="footer footer-center mt-12 p-10 text-gray-400 bg-black">
         <aside>
           <h1 className="text-3xl">Product Peak</h1>
           <p className="font-bold"> <br />
-            Providing reliable tech since 2007
+            Providing tech update since 2007
           </p>
           <p className="font-bold">
             Contact at: faraazhossainimran@gmail.com

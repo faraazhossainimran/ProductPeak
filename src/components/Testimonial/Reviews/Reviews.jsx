@@ -35,7 +35,7 @@ const Reviews = ({ reviews }) => {
             )}
           </>
         ) : (
-          <button className="btn mt-4">
+          <button className="btn mt-4 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">
             No Reviews has been given
             <div className="badge">0</div>
           </button>

@@ -31,23 +31,23 @@ const ProductDetails = () => {
         className="hero py-12"
         style={{
           backgroundImage:
-            "url(https://i.ibb.co/mzfThy3/aron-visuals-b-ZZp1-Pm-HI0-E-unsplash.jpg)",
+            "url(https://i.ibb.co/n1Rnxt0/shubham-dhage-f-QL1-DKNUQZw-unsplash.jpg)",
         }}
       >
         <div className="hero-overlay bg-opacity-60"></div>
         <div className="hero-content text-center text-neutral-content">
           <div className="">
-            <h1 className="mb-5 text-5xl font-bold my-4">
+            <h1 className="mb-5 text-5xl font-bold my-4 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">
               Details of {productDetail?.productName}
             </h1>
-            <button className="btn btn-primary">
+            <button className="btn">
               Total vote: {productDetail?.voteCount}
             </button>
           </div>
         </div>
       </div>
       <div className="container mx-auto m-4 md:m-0">
-        <div className="grid md:grid-cols-3 md:gap-12 md:mx-[200px] mt-12">
+        <div className="grid md:grid-cols-3 md:gap-12  mt-12">
           <div className="md:col-span-2 m-4 md:m-0">
             <div className="card bg-base-100 border-2">
               <figure>
@@ -60,13 +60,13 @@ const ProductDetails = () => {
             </div>
             {/* Testimonials */}
             <div className="">
-              <h1 className="text-3xl font-semibold mt-12">Product Reviews</h1>
+              <h1 className="text-3xl font-semibold mt-12 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">Product Reviews</h1>
               <Reviews reviews={reviews}></Reviews>
               <SubmitReview productDetail={productDetail} user={user}></SubmitReview>
             </div>
           </div>
           <div>
-            <div className="card m-4 md:m-0 card-compact md:w-96 bg-base-100 border-2">
+            <div className="card m-4 md:m-0 card-compact border-2">
               <div className="card-body">
                 <h2 className="text-xl font-semibold">Author Information: </h2>
                 <div className="flex">
@@ -80,13 +80,13 @@ const ProductDetails = () => {
               </div>
             </div>
               <div className="m-4 md:m-0">
-              <div className="card card-compact md:w-96 bg-base-100 border-2 mt-6">
+              <div className="card card-compact bg-base-100 border-2 mt-6">
               <div className="card-body">
                 <h2 className="card-title">Product Tags</h2>
                 <div className="card-actions p-2">
                   {productDetail?.tags? <>{productDetail?.tags?.map((tag, index) => (
-                    <div key={index} className="badge badge-outline">
-                     {tag}
+                    <div key={index} className="">
+                     #{tag}
                     </div>
                   ))}</> : <p className="text-lg">No Product tags for this product</p>}
                 
