@@ -5,7 +5,6 @@ import DiscussionRow from "./DiscussionRow";
 
 const Discussion = () => {
   const [discussion, isPending] = useDiscussion()
-  console.log("from discussion", discussion?.length);
   return (
     <div>
       <div

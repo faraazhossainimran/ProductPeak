@@ -37,7 +37,7 @@ const AuthProvider = ({children}) => {
            setUser(currentUser)
             if (currentUser) {
                 setLoading(false)
-                console.log(user.email);
+                // console.log(user?.email);
             } else {
                 setLoading(false)
               return ()=> {unsubscribe()}

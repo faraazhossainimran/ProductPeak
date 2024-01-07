@@ -4,7 +4,7 @@ import useTrending from "../../../../hooks/useTrending"
 
 const TrendingProducts = () => {
     const [trendingItems] = useTrending()
-    console.log(trendingItems);
+    // console.log(trendingItems);
     return (
         <div className="card container mx-auto my-12">
         <h1 className="text-2xl font-semibold my-8 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">Trending Products</h1>

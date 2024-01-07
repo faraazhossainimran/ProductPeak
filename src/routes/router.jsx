@@ -16,6 +16,7 @@ import ManageUsers from "../pages/Dashboard/ManageUsers/ManageUsers";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import Discussion from "../pages/Discussion/Discussion";
 import Question from "../pages/Question/Question";
+import DiscussionDetails from "../pages/Discussion/DiscussionDetails";
 
 const router = createBrowserRouter([
   {
@@ -42,6 +43,10 @@ const router = createBrowserRouter([
       {
         path: "/discussion",
         element: <Discussion></Discussion>
+      },
+      {
+        path: "/discussion/:id",
+        element: <DiscussionDetails></DiscussionDetails>
       },
       {
         path: "/question",
