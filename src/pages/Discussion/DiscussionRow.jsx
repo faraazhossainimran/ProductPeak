@@ -17,7 +17,7 @@ const DiscussionRow = ({dis}) => {
               </div>
             </div>
             <div>
-              <div className="font-semibold text-[18px]">{name}</div>
+              <div className="font-semibold text-[18px]"><Link to={`/discussion/${_id}`}>{name}</Link></div>
               {/* <div className="text-sm opacity-50">United States</div> */}
             </div>
           </div>

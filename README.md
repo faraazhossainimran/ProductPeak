@@ -1,4 +1,4 @@
-Client site Link: https://product-peak-568e6.web.app/
+Client site Link: https://steady-kelpie-61d494.netlify.app
 Features: 
 1. Users can create account and login using this site to save their account info
 2. Users can post products 
